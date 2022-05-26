@@ -1,0 +1,67 @@
+# Modal Window
+
+## Table of contents
+
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+## Overview
+
+This is an interactive page which displays a modal window when the 'Click Me' button is clicked. This was done by using JavaScript to manipulate HTML and CSS.
+
+### Screenshot
+
+![](./Screenshot%202022-05-26%20093729.png)
+![](./Screenshot%202022-05-26%20093810.png)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS
+- JavaScript
+
+### What I learned
+
+I learned how to use JavaScript to add and remove classes to HTML elements, as well as how to manipulate styles in CSS. I learned how to use eventListeners and what different events go within the parentheses of these methods.
+
+See a code snippet below:
+
+```js
+document.addEventListener('keydown', function (event) {
+  console.log(event.key);
+
+  if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});
+```
+
+If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+
+**Note: Delete this note and the content within this section and replace with your own learnings.**
+
+### Continued development
+
+I would love to learn more about the removal and addition of different classes and what else can be manipulated.
+
+### Useful resources
+
+- [JavaScript Course](https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648487#overview) - The guidance provided by Mr. Schmedtmann was instrumental in me completing this project.
+
+## Author
+
+- Frontend Mentor - [@ReeAya](https://www.frontendmentor.io/profile/ReeAya)
+
+## Acknowledgments
+
+Shout out to Mr. Jonas Schmedtmann for his help with building this project.
