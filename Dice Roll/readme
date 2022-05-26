@@ -1,0 +1,68 @@
+# Dice Roll
+
+## Table of contents
+
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+## Overview
+
+This is a 2 player game which involves players rolling the dice until or holding their scores until one person reaches 20. However, if a 1 is rolled, the current player's score is returned to 0, and the next player becomes the current player.
+
+### Screenshot
+
+![](./Screenshot%202022-05-26%20095407.png)
+![](./Screenshot%202022-05-26%20095432.png)
+![](./Screenshot%202022-05-26%20095456.png)
+![](./Screenshot%202022-05-26%20095517.png)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS
+- JavaScript
+
+### What I learned
+
+This was the most complex project that I've worked on until now, and it was very rewarding to finally see it working. I learned how to break down the game logic in to steps, inorder to understand what needs to be done, and how it should be done. This project used a bit more complex Javascript and I thoroughly enjoyed googling until I found some assistance on StackOverflow.
+
+See a code snippet below:
+
+```js
+if (scores[activePlayer] >= 20) {
+  playing = false; //playing === false so btns will not work
+  diceEl.classList.add('hidden');
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.add('player--winner');
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.remove('player--active');
+} else {
+  // 3. if 100 finish the game
+  // 4. if not switch to next player
+  switchPlayer();
+}
+```
+
+### Useful resources
+
+- [JavaScript Course](https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648487#overview) - The guidance provided by Mr. Schmedtmann was instrumental in me completing this project.
+
+## Author
+
+- Frontend Mentor - [@ReeAya](https://www.frontendmentor.io/profile/ReeAya)
+
+## Acknowledgments
+
+Shout out to Mr. Jonas Schmedtmann for his help with building this project.
